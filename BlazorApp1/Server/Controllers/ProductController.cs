@@ -36,9 +36,9 @@ namespace BlazorApp1.Server.Controllers
         }
     };
         [HttpGet]
-           public async Task <IActionResult> GetProducts()
-             {
-                return Ok(Products);
-             }
+        public async Task<IActionResult> GetProducts()
+        {
+            return Ok(Products);
+        }
     }
 }
