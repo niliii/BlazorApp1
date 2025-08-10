@@ -1,12 +1,20 @@
 global using BlazorApp1.Shared;
+global using Microsoft.EntityFrameworkCore;
+using BlazorApp1.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models; 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<DataContext>(Options =>
+{
+    Options.UseSqlServer(conection => builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
