@@ -8,12 +8,14 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<DataContext>(Options =>
-{   
-    Options.UseSqlServer(conection => builder.Configuration.GetConnectionString("DefaultConnection"));
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
 
 
 builder.Services.AddEndpointsApiExplorer();
