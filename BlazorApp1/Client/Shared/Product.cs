@@ -6,7 +6,7 @@ public class Product
     public string Title { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;
 
-    public string ImageUrl { get; set; } = string.Empty; // بدون صفت Column
+    public string ImageUrl { get; set; } = string.Empty; 
 
     [Column(TypeName = "decimal(18,2)")]
     public decimal Price { get; set; }

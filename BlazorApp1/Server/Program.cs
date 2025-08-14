@@ -1,6 +1,6 @@
 global using BlazorApp1.Shared;
 global using Microsoft.EntityFrameworkCore;
-using BlazorApp1.Server.Data;
+global using BlazorApp1.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models; 
