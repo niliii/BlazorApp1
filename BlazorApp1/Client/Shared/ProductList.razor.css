@@ -39,12 +39,12 @@
         flex-grow: 1;
     }
 
-    .product-card .price {
+/*    .product-card .price {
         font-weight: bold;
         font-size: 1rem;
         margin: 0 1rem 1rem;
         color: #2a9d8f;
-    }
+    }*/
 
 @media (max-width: 600px) {
     .product-card h3 {
@@ -55,7 +55,7 @@
         font-size: 0.85rem;
     }
 
-    .product-card .price {
+/*    .product-card .price {
         font-size: 0.95rem;
-    }
+    }*/
 }
